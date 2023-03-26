@@ -210,14 +210,14 @@ a:hover {
     display:flex;
     flex-direction: column;
 }
-#membership input {
+#Membership input {
     background-color: rgb(247, 251, 255);
     height: 20px;
 }
-#membership label {
+#Membership label {
     color: rgb(13, 105, 134);
 }
-#membership textarea {
+#Membership textarea {
     background-color: rgb(247, 251, 255);
     margin-bottom:5px;
 }

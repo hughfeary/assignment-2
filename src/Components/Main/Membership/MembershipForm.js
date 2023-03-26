@@ -2,21 +2,30 @@ import React from "react";
 
 
 const MembershipForm = () => {
+    function focus(id) {
+        document.getElementById(id).style.backgroundColor = "#CCFFFF";
+    }
+
+    const blur = (id) => {
+        document.getElementById(id).style.backgroundColor = "rgb(247, 251, 255)";
+    }
+    
+    
     return (
         <form id="membershipForm" name="membershipForm" method="post">
             <div className="rowForm">
                 <div className="rowContainer">
                     <div id="titleBox" className="formBox">
                         <label className="label" for="title">Title</label>
-                        <input id="titleInput" type="text" name="title" aria-label="Title" />
+                        <input id="titleInput" onFocus={() => focus("titleInput")} onBlur={()=>blur("titleInput")} type="text" name="title" aria-label="Title" />
                     </div>
                     <div id="firstNameBox" className="formBox">
                         <label className="label" for="firstName">First name</label>
-                        <input id="firstName" type="text" aria-label="First name" />
+                        <input id="firstName" onFocus={() => focus("firstName")} onBlur={()=>blur("firstName")} type="text" aria-label="First name" />
                     </div>
                     <div id="lastNameBox" className="formBox">
                         <label className="label" for="lastName">Last name</label>
-                        <input id="lastName" type="text" aria-label="Last name" />
+                        <input id="lastName" onFocus={() => focus("lastName")} onBlur={()=>blur("lastName")} type="text" aria-label="Last name" />
                     </div>
                 </div>
             </div>
@@ -24,11 +33,11 @@ const MembershipForm = () => {
                 <div className="rowContainer">
                     <div id="emailBox" className="formBox">
                         <label className="label" for="email">Email</label>
-                        <input type="text" name="email" aria-label="email" />
+                        <input type="text" name="email" id="email" onFocus={() => focus("email")} onBlur={()=>blur("email")} aria-label="email" />
                     </div>
                     <div id="mobileBox" className="formBox">
                         <label className="label" for="mobile">Mobile</label>
-                        <input type="text" name="mobile" aria-label="Mobile" />
+                        <input type="text" name="mobile" id="mobile" onFocus={() => focus("mobile")} onBlur={()=>blur("mobile")} aria-label="Mobile" />
                     </div>
                 </div>
             </div>
@@ -53,7 +62,7 @@ const MembershipForm = () => {
                 <div className="rowContainerCentered">
                     <div id="extendedText" className="formBox">
                         <label className="label" for="freeText">Comments</label>
-                        <textarea id="freeText" placeholder="Questions, concerns or anything you would like to share..."></textarea>
+                        <textarea id="freeText" onFocus={() => focus("freeText")} onBlur={()=>blur("freeText")} placeholder="Questions, concerns or anything you would like to share..."></textarea>
                     </div>
                 </div>
             </div>
