@@ -1,0 +1,403 @@
+a {
+    text-decoration: none;
+    color: rgb(214, 234, 251);
+}
+a:hover {
+    color:rgb(13, 105, 134);
+    background-color:rgb(229, 243, 254);
+}
+.Header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #0d6986;
+    color: rgb(182, 222, 252);
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+}
+.clubLogo {
+    display:flex;
+    height: 200px;
+}
+.Header h2 {
+    font-size: 55px;
+}
+.titleAndMottoHeader {
+    padding-top: 10px;
+    font-size:22px;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+}
+.clubMottoHeader {
+    font-size:30px;
+    letter-spacing:5px;
+    color: rgb(147, 195, 232);
+    font-style: italic;
+}
+.searchContainer {
+    display:flex;
+    flex-direction:column;
+    font-size: 25px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    align-self: end;
+}
+.searchContainer input {
+    font-size: 16px;
+}
+.searchContainer button {
+    height:33px;
+}
+.searchBar {
+    width: 200px;
+    height: 25px;
+}
+.barWithButton {
+    display:flex;
+    align-items: center;
+}
+.NavigationBar {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color: #0d6986;
+    text-align:center;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+}
+.a {
+    flex-grow: 1;
+    flex-basis: 40px;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgb(229, 243, 254);
+    background-color: rgb(130, 167, 174);
+}
+.b {
+    flex-grow: 1;
+    flex-basis: 40px;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgb(229, 243, 254);
+    margin-right:2px;
+    margin-left:2px;
+    background-color: rgb(131, 174, 182);
+}
+/* start of main, including properties for text t/o */
+.Main {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: rgb(229, 243, 254);
+    color: black;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.Main h3 {
+    display:flex;
+    flex-direction:column;
+    color: rgb(4, 36, 46);
+    font-size: 30px;
+}
+.bannerContainer {
+    display: flex;
+    background-image: url("./images/welcomeBackgroundImage.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:10px;
+    width:100%;
+    text-align: center;
+    background-color: rgb(16, 131, 167);
+}
+.bannerContainer h2{
+    color: rgb(182, 222, 252);
+    font-size: 45px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+.bannerContainer h3 {
+    color: rgb(242, 249, 255);
+    font-size:30px;
+    font-weight: normal;
+    padding-left:8px;
+}
+.topBannerLeft {
+    width:70%;
+    display: flex;
+    flex-direction: column;
+}
+.topBannerRight {
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(214, 234, 251);
+    font-size: 20px;
+}
+.topBannerLeft p {
+    font-size: 25px;
+    color: rgb(147, 195, 232);
+}
+
+.mainLeft {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width: 70%;
+}
+.gallery {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    border-bottom: 5px solid rgb(13, 105, 134);
+}
+.galleryRow {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.gallery h3 {
+    width:100%;
+    text-align: center;
+}
+.gallery figure {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align:center;
+    align-items:center;
+    flex: 1 1 50%;
+    font-size:18px;
+}
+.gallery img {
+    max-width: 300px;
+    height: auto;
+}
+#membershipForm {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width:70%;
+    margin-left: 10%;
+}
+.MembershipHeader {
+    border-top: 5px solid rgb(13, 105, 134);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.membershipBottomRow {
+    display: flex;
+    flex-direction: row; 
+}
+.rowForm {
+    display:flex;
+    flex-direction:row;
+    justify-content:center; 
+}
+.rowContainer {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:80%;
+    background-color:rgb(237, 247, 254);
+    padding-bottom:8px;
+}
+.formBox {
+    display:flex;
+    flex-direction: column;
+}
+#membership input {
+    background-color: rgb(247, 251, 255);
+    height: 20px;
+}
+#membership label {
+    color: rgb(13, 105, 134);
+}
+#membership textarea {
+    background-color: rgb(247, 251, 255);
+    margin-bottom:5px;
+}
+#titleBox {
+    display:flex;
+    width:13%;
+    padding-right: 5%;
+}
+#firstNameBox {
+    width:38%;
+    padding-right:5%;
+}
+#lastNameBox {
+    width:38%;
+}
+#emailBox {
+    width:50%;
+    padding-right: 5%;
+}
+#mobileBox {
+    width:44%;
+}
+.rowContainerCentered {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:80%;
+    background-color:rgb(237, 247, 254);
+}
+#durationHeader p {
+    font-size:22px;
+    margin-bottom:2px;
+    margin-top: 5px;
+    color:rgb(13, 105, 134);
+    font-weight:bold;
+}
+#extendedText {
+    align-items: center;
+    width:100%;   
+}
+#freeText {
+    width:97%;
+    min-height: 50px;
+    font-size:18px;
+}
+#formSubmit {
+    height: 30px;
+    width: 80px;
+    margin-bottom:10px;
+}
+#formConfirmation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(237, 247, 254);
+}
+#formConfirmation button {
+    height: 30px;
+}
+.secondaryMain {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.mainRight {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:space-between;
+    background-color: rgb(242, 249, 255);
+    width:35%;
+    margin-left:0.5em;
+}
+.asideItem {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+    margin-left:2%;
+    margin-right:2%;
+    margin-bottom:2%;
+    border-top: 5px solid rgb(13, 105, 134);
+}
+#events {
+    border-top: none;
+}
+#videoHighlights video {
+    display:flex;
+    width: 100%;
+}
+
+.table {
+    background-color: rgb(229, 243, 254);
+    margin-bottom:7px;
+}
+.table th {
+    font-size:22px;
+    font-family: 'Lucida Sans','Trebuchet MS', Arial, sans-serif;
+    color: rgb(40, 91, 101);
+    background-color: rgb(182, 222, 252);
+}
+.table td{
+    font-size:20px;
+}
+
+.Footer {
+    display: flex;
+    flex-direction:column;
+    background-color: rgb(13, 105, 134);
+    color: rgb(182, 222, 252);
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+#sponsorSection {
+    display: flex;
+    flex-direction:column;
+    margin: 50px;
+}
+#SponsorSection h3 {
+    color:rgb(182, 222, 252);
+    font-size: 30px;
+    text-align: center
+}
+#SponsorSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:25px;
+    flex-basis:50px;
+}
+#sponsorLogoBanner {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:95%;
+    margin-left:2%;
+    margin-right: 2%;
+    background-color: rgb(16, 131, 167);
+}
+footer figure {
+    display:flex;
+}
+.sponsorLogo {
+    width: 150px;
+    height: auto;
+}
+.footerUpperRow {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Contact {
+    display:flex;
+    flex-direction:column;
+    margin-right:15%;
+    margin-left:5%;
+}
+.contactContainer {
+    display: flex;
+    flex-direction:column;
+}
+.lineOne {
+    margin-bottom: 0px;
+}
+.MapFeature iframe {
+    width: 500px;
+    height: 200px;
+}
+.lineTwo {
+    margin-top: 0px;
+    margin-bottom: 2px;
+    font-size: 17px;
+    color: rgb(232, 244, 254);
+}
+.Copyright {
+    margin-top: 8px;
+    margin-left:8px;
+}
+.MapFeature {
+    margin-left:8px;
+}
