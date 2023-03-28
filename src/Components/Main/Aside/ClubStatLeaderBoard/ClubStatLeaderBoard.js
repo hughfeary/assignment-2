@@ -2,7 +2,7 @@ import React from "react";
 
 const ClubStatLeaderBoard = () => {
     return (
-        <div id = "clubStatLeaderBoard" className="asideItem">
+        <div id = "PlayerStats" className="asideItem">
             <h3>Club Stats Leaderboard</h3>
             <table id="playerStatGoalsAssists" className="table">
                 <thead>

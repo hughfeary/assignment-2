@@ -6,7 +6,7 @@ import imgFour from "../../../images/gallery/cones.jpg";
 
 const PhotoGallery = () => {
     return (
-        <div className="gallery">
+        <div id="Gallery" className="gallery">
             <h3>Photo gallery</h3>
             <div className="galleryRow">
                 <figure className="galleryOne">

@@ -5,7 +5,7 @@ const Contact = () => {
         <div id="Contact" className="Contact">
             <h3>Contact us</h3>
             <address>
-            <a href="mailto:chadstonecobrasfcadmin@cobranet.com@subject=Enquiriry">Email our team</a>
+            <a href="mailto:admin@chadstonecobrasfc.com@subject=Enquiriry">Email our team</a>
             </address>
             <div className="contactContainer">
                 <p className="lineOne">Phone</p>

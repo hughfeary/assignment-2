@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 
 const SearchBarEnhancement = (OriginalComponent) => {
     class NewComponent extends React.Component {

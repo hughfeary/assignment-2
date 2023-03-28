@@ -2,20 +2,9 @@ import React from "react";
 import SearchBarEnhancement from "../SearchBar";
 
 const Events = (props) => {
-    // function searchTable () {
-    //     const search = props.searchTerm;
-    //     const regExp = new RegExp(search,"gi");
-    //     const eventTable = document.getElementById("eventsTable");
-    //     let tr = eventTable.getElementsByTagName("tr");
-    
-    //     if (props.searchTerm != "");
-    //         for (i = 0; i<tr.length; i++) {
-    //             console.log(tr.length)
-    //             }
-    //         }
 
     return (
-        <div id="events" className="asideItem">
+        <div id="Events" className="asideItem">
             <h3>Upcoming events</h3>
                 <table id="eventsTable" className="table">
                     <thead>

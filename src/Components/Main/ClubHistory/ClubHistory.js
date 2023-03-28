@@ -17,24 +17,19 @@ const ClubHistory = () => {
     const teamList = ["Derick Miller","Rayan French","Kane Griffin","Aidyn Jones","Grayson Smith","Finley Hampton", "Liam Daniels", "Lewis French"];
     const [hidden, setHidden] = useState(true);
     
-    function showPlayers () {
-        teamList.map((n, i) => {
-            return (
-                <div>
-                    <ul><li key={i}>{n}</li></ul>
-                </div>
-            )
-        });
-    };
-
+    const teamMap = teamList.map((n,i)=> <li key={i}>{n}</li>);
+    const styles = {
+        fontWeight: 'bold',
+        fontStyle: 'italic'
+    }
     return (
-        <div className="clubHistory">
+        <div id="ClubHistory" className="clubHistory">
             <h3>Chadstone Cobras FC: A rich history</h3>
             {paragraphs}
             <br />
             <span>
-                <p onMouseOver={()=>setHidden(false)} onMouseOut={()=>setHidden(true)}>Hover here to see the founding players:</p>
-                {hidden ? `hidden`: showPlayers()}
+                <p><span onMouseOver={()=>setHidden(false)} onMouseOut={()=>setHidden(true)} style={styles}>Hover here </span>to see the founding players:</p>
+                {hidden ? ``: (<ul>{teamMap}</ul>)}
             </span>
         </div>
     )

@@ -1,18 +1,15 @@
 import React from "react";
 
 const FurtherNavigation = () => {
+    const navList = ["Gallery","Video Highlights","Events","Club History","Injury List","Player Stats","Copyright"];
+    const navMap = navList.map((n,i) => (
+        <li key={i}><a href={`#${n.split(" ").join("")}`}>{n}</a></li>
+        ));
+
     return(
         <div className="topBannerRight">
             <h3>More Navigation</h3>
-                <ul>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#videoHighlights">Highlights</a></li>
-                    <li><a href="#events">Upcoming Events</a></li>
-                    <li><a href="#clubHistory">Club History</a></li>
-                    <li><a href="#injuryList">Injury List</a></li>
-                    <li><a href="#playerStats">Player statistics</a></li>
-                    <li><a href="#copyright">Terms & Conditions</a></li>
-                </ul>
+                <ul>{navMap}</ul>
         </div>
     )
 

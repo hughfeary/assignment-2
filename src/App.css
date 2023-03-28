@@ -306,7 +306,7 @@ a:hover {
 #events {
     border-top: none;
 }
-#videoHighlights video {
+#VideoHighlights video {
     display:flex;
     width: 100%;
 }
@@ -354,6 +354,7 @@ a:hover {
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items:baseline;
     width:95%;
     margin-left:2%;
     margin-right: 2%;

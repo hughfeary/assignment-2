@@ -2,7 +2,7 @@ import React from "react";
 
 const InjuryList = () => {
     return (
-        <div name="injuryList" className="asideItem">
+        <div id="InjuryList" name="injuryList" className="asideItem">
             <h3>Injury List</h3>
             <table id="injuryListTable" className="table">
                 <thead>
