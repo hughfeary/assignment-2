@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchBarEnhancement from "../SearchBar";
 
 const Events = (props) => {
 
+    const [tableData, setEventData] = useState([
+        {date:"March 16",event:"Sausage sizzle"},
+        {date:"April 6",event:"Poker night"},
+        {date:"April 20",event:"Club anniversary dinner"},
+        {date:"May 11",event:"Event TBC"}, 
+        {date:"June 10",event:"Event TBC"},
+    ]);
+    
+    const filteredData = tableData.filter((item) =>
+    item.event.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.date.toLowerCase().includes(props.searchTerm.toLowerCase())
+    );
+
     return (
-        <div id="Events" className="asideItem">
+        <div id="Events">
             <h3>Upcoming events</h3>
                 <table id="eventsTable" className="table">
                     <thead>
@@ -14,27 +27,12 @@ const Events = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>March 16</td>
-                            <td>Sausage sizzle</td>
-                        </tr>
-                        <tr>
-                            <td>April 6</td>
-                            <td>Poker night</td>
-                        </tr>
-                        <tr>
-                            <td>April 20</td>
-                            <td>Club anniversary dinner</td>
-                        </tr>
-                        <tr>
-                            <td>May 11</td>
-                            <td>Event TBC</td>
-                        </tr>
-                        <tr>
-                            <td>June 10</td>
-                            <td>Event TBC</td>
-                        </tr>
-                        <tr>{props.searchTerm}</tr>
+                        {filteredData.map((item)=> (
+                            <tr key={item.date}>
+                                <td>{item.date}</td>
+                                <td>{item.event}</td>
+                            </tr>
+                        ))}
                     </tbody>
                 </table>
         </div>

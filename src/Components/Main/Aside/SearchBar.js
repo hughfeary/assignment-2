@@ -9,7 +9,7 @@ const SearchBarEnhancement = (OriginalComponent) => {
         
         render() {
             return (
-            <div>
+            <div className="asideItem">
                 <input onChange={this.handleSearch} value={this.state.searchTerm} type="text" placeholder="Search" />
                 <OriginalComponent searchTerm={this.state.searchTerm}/>
             </div>

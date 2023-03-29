@@ -1,8 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
+import SearchBarEnhancement from "../SearchBar";
 
-const ClubStatLeaderBoard = () => {
+const ClubStatLeaderBoard = (props) => {
+    
+    const [tableData, setEventData] = useState([
+        {rank:"1",player:"B. Glover",goals:"6",assists:"4"},
+        {rank:"2",player:"M. Prince",goals:"4",assists:"3"},
+        {rank:"3",player:"J. Jones",goals:"3",assists:"3"},
+        {rank:"4",player:"G. Smith",goals:"1",assists:"4"},
+        {rank:"5",player:"M. Stewart",goals:"0",assists:"3"},
+    ]);
+    
+    const filteredData = tableData.filter((item) =>
+    item.rank.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.player.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.goals.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.assists.toLowerCase().includes(props.searchTerm.toLowerCase())
+    );
+
+
     return (
-        <div id = "PlayerStats" className="asideItem">
+        <div id = "PlayerStats">
             <h3>Club Stats Leaderboard</h3>
             <table id="playerStatGoalsAssists" className="table">
                 <thead>
@@ -14,40 +32,18 @@ const ClubStatLeaderBoard = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>B. Glover</td>
-                        <td>6</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>M. Prince</td>
-                        <td>4</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>J. Jones</td>
-                        <td>3</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>G. Smith</td>
-                        <td>1</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>M. Stewart</td>
-                        <td>0</td>
-                        <td>3</td>
-                    </tr>
+                    {filteredData.map((item)=> (
+                        <tr key={item.player}>
+                            <td>{item.rank}</td>
+                            <td>{item.player}</td>
+                            <td>{item.goals}</td>
+                            <td>{item.assists}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
     )
 }
 
-export default ClubStatLeaderBoard
+export default SearchBarEnhancement(ClubStatLeaderBoard)

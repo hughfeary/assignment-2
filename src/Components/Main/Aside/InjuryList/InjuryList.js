@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
+import SearchBarEnhancement from "../SearchBar";
 
-const InjuryList = () => {
+const InjuryList = (props) => {
+
+    const [tableData, setEventData] = useState([
+        {player:"T. Dover",injury:"Hamstring",estReturn:"2"},
+        {player:"W. Hunt",injury:"Back",estReturn:"1"},
+        {player:"J. Jones",injury:"Shoulder",estReturn:"3"},
+        {player:"G. Smith",injury:"Hip",estReturn:"1"},
+        {player:"M. Stewart",injury:"Rib",estReturn:"2"},
+    ]);
+    
+    const filteredData = tableData.filter((item) =>
+    item.player.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.injury.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.estReturn.toLowerCase().includes(props.searchTerm.toLowerCase())
+    );
+
     return (
-        <div id="InjuryList" name="injuryList" className="asideItem">
+        <div id="InjuryList" name="injuryList">
             <h3>Injury List</h3>
             <table id="injuryListTable" className="table">
                 <thead>
@@ -13,31 +29,13 @@ const InjuryList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>T. Dover</td>
-                        <td>Hamstring</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>W. Hunt</td>
-                        <td>Back</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>J. Jones</td>
-                        <td>Shoulder</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>G. Smith</td>
-                        <td>Hip</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>M. Stewart</td>
-                        <td>Rib</td>
-                        <td>2</td>
-                    </tr>
+                    {filteredData.map((item)=> (
+                        <tr key={item.player}>
+                            <td>{item.player}</td>
+                            <td>{item.injury}</td>
+                            <td>{item.estReturn}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
@@ -45,4 +43,4 @@ const InjuryList = () => {
 
 }
 
-export default InjuryList
+export default SearchBarEnhancement(InjuryList)

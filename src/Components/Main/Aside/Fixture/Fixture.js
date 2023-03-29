@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState} from "react";
 import SearchBarEnhancement from "../SearchBar";
 
-const Fixture = () => {
+const Fixture = (props) => {
+    const [tableData, setEventData] = useState([
+        {date:"March 18",versus:"Cobras",homeAway:"Home"},
+        {date:"March 25",versus:"Renegades",homeAway:"Home"},
+        {date:"April 4",versus:"Rovers",homeAway:"Away"},
+        {date:"April 11",versus:"Tillsters",homeAway:"Home"},
+        {date:"April 18",versus:"Dodgers",homeAway:"Away"},
+    ]);
+    
+    const filteredData = tableData.filter((item) =>
+    item.date.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.versus.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
+    item.homeAway.toLowerCase().includes(props.searchTerm.toLowerCase())
+    );
+
     return (
-        <div id="fixture" className="asideItem">
+        <div id="fixture">
             <h3>Fixture</h3>
             <table id="fixtureTable" className="table">
                 <thead>
@@ -14,31 +28,13 @@ const Fixture = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>March 18</td>
-                        <td>Cobras</td>
-                        <td>Home</td>
-                    </tr>
-                    <tr>
-                        <td>March 25</td>
-                        <td>Renegades</td>
-                        <td>Home</td>
-                    </tr>
-                    <tr>
-                        <td>April 4</td>
-                        <td>Rovers</td>
-                        <td>Away</td>
-                    </tr>
-                    <tr>
-                        <td>April 11</td>
-                        <td>Tillsters</td>
-                        <td>Home</td>
-                    </tr>
-                    <tr>
-                        <td>April 18</td>
-                        <td>Dodgers</td>
-                        <td>Away</td>
-                    </tr>
+                {filteredData.map((item)=> (
+                            <tr key={item.date}>
+                                <td>{item.date}</td>
+                                <td>{item.versus}</td>
+                                <td>{item.homeAway}</td>
+                            </tr>
+                        ))}
                 </tbody>
             </table>
         </div>

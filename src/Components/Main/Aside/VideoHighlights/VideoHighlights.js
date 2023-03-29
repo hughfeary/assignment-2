@@ -14,4 +14,4 @@ const VideoHighlights = () => {
 
 }
 
-export default SearchBarEnhancement(VideoHighlights)
+export default VideoHighlights

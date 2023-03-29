@@ -303,7 +303,7 @@ a:hover {
     margin-bottom:2%;
     border-top: 5px solid rgb(13, 105, 134);
 }
-#events {
+#Events {
     border-top: none;
 }
 #VideoHighlights video {
@@ -312,6 +312,7 @@ a:hover {
 }
 
 .table {
+    width:100%;
     background-color: rgb(229, 243, 254);
     margin-bottom:7px;
 }
