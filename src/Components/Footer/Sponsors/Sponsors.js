@@ -4,10 +4,10 @@ import logoTwo from "../../../images/sponsorLogo/willscharityLogo.png";
 import logoThree from "../../../images/sponsorLogo/equationLogo.png";
 import logoFour from "../../../images/sponsorLogo/puzzlechampLogo.png"
 
-const Sponsorship = () => {
+const Sponsors = () => {
     
     return (
-        <div id="SponsorSection">
+        <div id="Sponsors">
             <div>
                 <h3>Club sponsors</h3>
                 <p>We are proud to be sponsored by the following organisations</p>
@@ -31,4 +31,4 @@ const Sponsorship = () => {
     )
 }
 
-export default Sponsorship
+export default Sponsors

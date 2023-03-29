@@ -1,5 +1,5 @@
 import React from "react";
-import Sponsorship from "./Sponsorship/Sponsorship";
+import Sponsorship from "./Sponsors/Sponsors";
 import Copyright from "./Copyright/Copyright";
 import MapFeature from "./Map/Map";
 import ContactInfo from "./ContactInfo/ContactInfo";

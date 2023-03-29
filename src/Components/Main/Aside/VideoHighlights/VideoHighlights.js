@@ -1,6 +1,5 @@
 import React from "react";
 import vidHighlight from "../../../../videos/highlightVideo.mp4"
-import SearchBarEnhancement from "../SearchBar";
 
 const VideoHighlights = () => {
     return (

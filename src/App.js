@@ -11,9 +11,10 @@ const App = () => {
     <div>
       <ErrorBoundary>
         <Header clubName="Chadstone Cobras FC" />
+        <NavigationBar />
         <Main />
         <Footer />
-        <NavigationBar />
+        
       </ErrorBoundary>
       
     </div>

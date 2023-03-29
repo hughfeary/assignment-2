@@ -1,14 +1,14 @@
 import React from "react";
 
 const NavigationBar = () => {
+    const navItems = ["Welcome","Fixture","Membership","Sponsors", "Contact Us"];
 
+    const mappedNavItems = navItems.map((n,i) => (
+        <div className={(i%2 === 0) ? "a" : "b"}><a href={`#${n.split(" ").join("")}`}>{n}</a></div>
+    ))
     return (
         <div className="NavigationBar">
-            <div className="a"><a href="#welcome">Welcome</a></div>
-            <div className="b"><a href="#fixture">Fixture</a></div>
-            <div className="a"><a href="#membership">Membership</a></div>
-            <div className="b"><a href="#sponsorSection">Sponsors</a></div>
-            <div className="a"><a href="#contactInfo">Contact us</a></div>
+            {mappedNavItems}
         </div>
     )
 }

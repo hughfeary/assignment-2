@@ -17,7 +17,7 @@ const Fixture = (props) => {
     );
 
     return (
-        <div id="fixture">
+        <div id="Fixture">
             <h3>Fixture</h3>
             <table id="fixtureTable" className="table">
                 <thead>
