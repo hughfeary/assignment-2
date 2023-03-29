@@ -1,15 +1,15 @@
-import React, {useState} from "react";
+import React from "react";
 import SearchBarEnhancement from "../SearchBar";
 
 const InjuryList = (props) => {
 
-    const [tableData, setEventData] = useState([
+    const tableData = [
         {player:"T. Dover",injury:"Hamstring",estReturn:"2"},
         {player:"W. Hunt",injury:"Back",estReturn:"1"},
         {player:"J. Jones",injury:"Shoulder",estReturn:"3"},
         {player:"G. Smith",injury:"Hip",estReturn:"1"},
         {player:"M. Stewart",injury:"Rib",estReturn:"2"},
-    ]);
+    ];
     
     const filteredData = tableData.filter((item) =>
     item.player.toLowerCase().includes(props.searchTerm.toLowerCase()) ||

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import SearchBarEnhancement from "../SearchBar";
 
 const Events = (props) => {
 
-    const [tableData, setEventData] = useState([
+    const tableData = [
         {date:"March 16",event:"Sausage sizzle"},
         {date:"April 6",event:"Poker night"},
         {date:"April 20",event:"Club anniversary dinner"},
         {date:"May 11",event:"Event TBC"}, 
         {date:"June 10",event:"Event TBC"},
-    ]);
+    ];
     
     const filteredData = tableData.filter((item) =>
     item.event.toLowerCase().includes(props.searchTerm.toLowerCase()) ||
