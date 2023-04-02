@@ -1,16 +1,16 @@
 import React from "react";
 
 const MembershipBenefits = () => {
+    const benefitList = ["Free tickets to regular season games","Discounted finals tickets","Access to our Cobra's Social Club","Priority seating at home games","Entry into the Weekly raffle","And much more!"]
+    const memberBenefits = benefitList.map((n,i) => (
+        <li key={i}>{n}</li>
+    ));
+
     return (
         <div className="MembershipBenefits">
             <h3>As a member you get:</h3>
                 <ul>
-                    <li>Free tickets to regular season games</li>
-                    <li>Discounted finals tickets</li>
-                    <li>Access to our Cobra's Social Club</li>
-                    <li>Priority seating at home games</li>
-                    <li>Entry into the Weekly raffle</li>
-                    <li>And much more!</li>
+                    {memberBenefits}
                 </ul>
         </div>
     )
