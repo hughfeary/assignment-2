@@ -4,9 +4,12 @@ import Copyright from "./Copyright/Copyright";
 import MapFeature from "./Map/Map";
 import ContactInfo from "./ContactInfo/ContactInfo";
 
+const backToTop = (<div id="backToTop"><a id="backToTop" href=".header">Back to top</a></div>);
+
 const Footer = () => {
     return (
-        <div className="Footer">
+        <div className="Footer">            
+            {backToTop}
             <Sponsorship />
             <div className="footerUpperRow">
                 <MapFeature />

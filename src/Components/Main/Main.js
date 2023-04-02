@@ -4,11 +4,7 @@ import FurtherNavigation from "./FurtherNavigation/FurtherNavigation";
 import PhotoGallery from "./PhotoGallery/PhotoGallery";
 import ClubHistory from "./ClubHistory/ClubHistory";
 import Membership from "./Membership/Membership";
-import Events from "./Aside/Events/Events";
-import VideoHighlights from "./Aside/VideoHighlights/VideoHighlights"
-import Fixture from "./Aside/Fixture/Fixture";
-import InjuryList from "./Aside/InjuryList/InjuryList";
-import ClubStatLeaderBoard from "./Aside/ClubStatLeaderBoard/ClubStatLeaderBoard";
+import Aside from "./Aside/Aside";
 
 const Main = () => {
     return (
@@ -23,13 +19,7 @@ const Main = () => {
                     <ClubHistory />
                     <Membership />
                 </div>
-                <div className="mainRight">
-                    <Events />
-                    <VideoHighlights />
-                    <Fixture />
-                    <InjuryList />
-                    <ClubStatLeaderBoard />
-                </div>
+                <Aside />
             </div>
         </div>
     )

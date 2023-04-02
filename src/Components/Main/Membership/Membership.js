@@ -1,7 +1,9 @@
 import React from "react";
 import MembershipForm from "./MembershipForm";
 import MembershipBenefits from "./MembershipBenefits";
-import MembershipHeader from "./MembershipHeader"
+import MembershipHeader from "./MembershipHeader";
+import { buttonSubmit } from "./MembershipForm";
+import { newForm } from "./MembershipForm";
 
 
 const Membership = () => {
@@ -10,7 +12,7 @@ const Membership = () => {
             <MembershipHeader />
             <div className="membershipBottomRow">
                 <MembershipBenefits />
-                <MembershipForm />
+                <MembershipForm buttonSubmit={buttonSubmit} newForm={newForm}/>
             </div>
         </div>
     )

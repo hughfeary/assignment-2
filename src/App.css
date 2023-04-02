@@ -6,7 +6,7 @@ a:hover {
     color:rgb(13, 105, 134);
     background-color:rgb(229, 243, 254);
 }
-.Header {
+.header {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -157,8 +157,11 @@ a:hover {
     width:100%;
     text-align: center;
 }
-
-.gallery img {
+.clubHistory {
+    display:flex;
+    flex-direction:column;
+}
+.galleryImg {
     max-width: 600px;
     height: auto;
 }
@@ -249,7 +252,7 @@ a:hover {
     min-height: 50px;
     font-size:18px;
 }
-#formSubmit {
+#buttonSubmit {
     height: 30px;
     width: 80px;
     margin-bottom:10px;
@@ -270,7 +273,7 @@ a:hover {
 
 
 
-.mainRight {
+.aside {
     display:flex;
     flex-direction: column;
     align-items:center;
@@ -319,6 +322,11 @@ a:hover {
     color: rgb(182, 222, 252);
     font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
+}
+#backToTop {
+    display:flex;
+    justify-content: flex-start;
+    margin:5px;
 }
 #Sponsors {
     display: flex;
@@ -388,4 +396,25 @@ footer figure {
 }
 .MapFeature {
     margin-left:8px;
+}
+
+@media screen and (max-width: 950px) {
+    .bannerContainer {
+        flex-direction: column;
+        align-items:center;
+    }
+    .mainLeft {
+        width:90%;
+    }
+    .secondaryMain {
+        flex-direction: column;
+        width:100%;
+        align-items:center;
+    }
+    .aside {
+        width: 90%;
+    }
+    #sponsorLogoBanner {
+        flex-wrap:wrap;
+    }
 }

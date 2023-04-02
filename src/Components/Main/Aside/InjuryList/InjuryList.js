@@ -1,5 +1,5 @@
 import React from "react";
-import SearchBarEnhancement from "../SearchBar";
+import SearchBarEnhancement from "../SearchBarEnhancement";
 
 const InjuryList = (props) => {
 

@@ -1,7 +1,42 @@
 import React from "react";
 
 
-const MembershipForm = () => {
+
+
+export function newForm() {
+    let rowsCent = document.getElementsByClassName("rowContainerCentered");
+    let rows = document.getElementsByClassName("rowContainer");
+    let inputList = document.getElementsByTagName("input");
+    for (let i=0;i<rowsCent.length;i+=1) {
+        rowsCent[i].style.display="flex";
+    }
+    for (let i=0; i<rows.length;i+=1) {
+        rows[i].style.display="flex";
+    }
+    document.getElementById("formConfirmation").style.display = "none";
+    
+    for (let i=0;i<inputList.length;i+=1) {
+        inputList[i].value="";
+    }
+    document.getElementById("freeText").value = "";
+}
+
+export function buttonSubmit() {
+    let rowsCent = document.getElementsByClassName("rowContainerCentered");
+    let rows = document.getElementsByClassName("rowContainer");
+   
+    for (let i=0;i<rowsCent.length;i+=1) {
+        rowsCent[i].style.display="none";
+    }
+    for (let i=0; i<rows.length;i+=1) {
+        rows[i].style.display="none";
+    }
+    document.getElementById("formConfirmation").style.display ="flex";
+}
+
+
+
+const MembershipForm = (props) => {
     function focus(id) {
         document.getElementById(id).style.backgroundColor = "#CCFFFF";
     }
@@ -10,36 +45,6 @@ const MembershipForm = () => {
         document.getElementById(id).style.backgroundColor = "rgb(247, 251, 255)";
     }
     
-    function buttonSubmit() {
-        let rowsCent = document.getElementsByClassName("rowContainerCentered");
-        let rows = document.getElementsByClassName("rowContainer");
-       
-        for (let i=0;i<rowsCent.length;i+=1) {
-            rowsCent[i].style.display="none";
-        }
-        for (let i=0; i<rows.length;i+=1) {
-            rows[i].style.display="none";
-        }
-        document.getElementById("formConfirmation").style.display ="flex";
-    }
-    
-    function newForm() {
-        let rowsCent = document.getElementsByClassName("rowContainerCentered");
-        let rows = document.getElementsByClassName("rowContainer");
-        let inputList = document.getElementsByTagName("input");
-        for (let i=0;i<rowsCent.length;i+=1) {
-            rowsCent[i].style.display="flex";
-        }
-        for (let i=0; i<rows.length;i+=1) {
-            rows[i].style.display="flex";
-        }
-        document.getElementById("formConfirmation").style.display = "none";
-        
-        for (let i=0;i<inputList.length;i+=1) {
-            inputList[i].value="";
-        }
-        document.getElementById("freeText").value = "";
-    }
     
     return (
         <form id="membershipForm" name="membershipForm" method="post">
@@ -98,12 +103,12 @@ const MembershipForm = () => {
             </div>
             <div className="rowForm">
                 <div className="rowContainerCentered">
-                    <button id="formSubmit" onClick={()=>buttonSubmit()} type="button" aria-label="Submit membership form">Submit</button>
+                    <button id="buttonSubmit" onClick={()=>props.buttonSubmit()} type="button" aria-label="Submit membership form">Submit</button>
                 </div>
             </div>
             <div id="formConfirmation">
                 <p>Thank you, your form has been submitted.</p>
-                <button id="additionalForm" onClick={() => newForm()} type="button" aria-label="Submit another form">Submit another form</button>
+                <button id="newForm" onClick={() => props.newForm()} type="button" aria-label="Submit another form">Submit another form</button>
             </div>
         </form>
     )
