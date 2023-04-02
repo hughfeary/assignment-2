@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/chadstone-cobras/static/css/main.dd0044be.css",
-    "main.js": "/chadstone-cobras/static/js/main.b5abd28f.js",
-    "static/media/highlightVideo.mp4": "/chadstone-cobras/static/media/highlightVideo.a347c2013ef6b169ad99.mp4",
-    "static/media/cones.jpg": "/chadstone-cobras/static/media/cones.3f41d7041f90a2e78cbe.jpg",
-    "static/media/crowd.jpg": "/chadstone-cobras/static/media/crowd.91ee238f31d627440efd.jpg",
-    "static/media/welcomeBackgroundImage.png": "/chadstone-cobras/static/media/welcomeBackgroundImage.73c882ed40b7a76ae518.png",
-    "static/media/midKick.jpg": "/chadstone-cobras/static/media/midKick.35163f20038037043113.jpg",
-    "static/media/goalkeeper.jpg": "/chadstone-cobras/static/media/goalkeeper.98386133ddb58fe1bb6d.jpg",
-    "static/media/clubLogo.png": "/chadstone-cobras/static/media/clubLogo.98b96aad7d221d473a71.png",
-    "static/media/willscharityLogo.png": "/chadstone-cobras/static/media/willscharityLogo.01df545bc3e946262008.png",
-    "static/media/puzzlechampLogo.png": "/chadstone-cobras/static/media/puzzlechampLogo.1425940bb97c48241e1b.png",
-    "static/media/equationLogo.png": "/chadstone-cobras/static/media/equationLogo.dd57e8a14443e361cc03.png",
-    "static/media/feathertechLogo.png": "/chadstone-cobras/static/media/feathertechLogo.8f709f33bad869eab21b.png",
-    "index.html": "/chadstone-cobras/index.html",
-    "main.dd0044be.css.map": "/chadstone-cobras/static/css/main.dd0044be.css.map",
-    "main.b5abd28f.js.map": "/chadstone-cobras/static/js/main.b5abd28f.js.map"
+    "main.css": "/assignment-2/static/css/main.b84a9562.css",
+    "main.js": "/assignment-2/static/js/main.46150623.js",
+    "static/media/highlightVideo.mp4": "/assignment-2/static/media/highlightVideo.a347c2013ef6b169ad99.mp4",
+    "static/media/cones.jpg": "/assignment-2/static/media/cones.3f41d7041f90a2e78cbe.jpg",
+    "static/media/crowd.jpg": "/assignment-2/static/media/crowd.91ee238f31d627440efd.jpg",
+    "static/media/welcomeBackgroundImage.png": "/assignment-2/static/media/welcomeBackgroundImage.73c882ed40b7a76ae518.png",
+    "static/media/midKick.jpg": "/assignment-2/static/media/midKick.35163f20038037043113.jpg",
+    "static/media/goalkeeper.jpg": "/assignment-2/static/media/goalkeeper.98386133ddb58fe1bb6d.jpg",
+    "static/media/clubLogo.png": "/assignment-2/static/media/clubLogo.98b96aad7d221d473a71.png",
+    "static/media/willscharityLogo.png": "/assignment-2/static/media/willscharityLogo.01df545bc3e946262008.png",
+    "static/media/puzzlechampLogo.png": "/assignment-2/static/media/puzzlechampLogo.1425940bb97c48241e1b.png",
+    "static/media/equationLogo.png": "/assignment-2/static/media/equationLogo.dd57e8a14443e361cc03.png",
+    "static/media/feathertechLogo.png": "/assignment-2/static/media/feathertechLogo.8f709f33bad869eab21b.png",
+    "index.html": "/assignment-2/index.html",
+    "main.b84a9562.css.map": "/assignment-2/static/css/main.b84a9562.css.map",
+    "main.46150623.js.map": "/assignment-2/static/js/main.46150623.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd0044be.css",
-    "static/js/main.b5abd28f.js"
+    "static/css/main.b84a9562.css",
+    "static/js/main.46150623.js"
   ]
 }
