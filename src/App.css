@@ -8,7 +8,6 @@ a:hover {
 }
 .header {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     background-color: #0d6986;
     color: rgb(182, 222, 252);
@@ -18,14 +17,16 @@ a:hover {
     display:flex;
     height: 200px;
 }
-.Header h2 {
+.header h2 {
     font-size: 55px;
 }
 .titleAndMottoHeader {
+    display:flex;
+    flex-direction:column;
     padding-top: 10px;
+    margin-left: 26%;
     font-size:22px;
     text-align: center;
-    margin: auto;
     align-self: center;
 }
 .clubMottoHeader {
@@ -405,6 +406,9 @@ footer figure {
     }
     .mainLeft {
         width:90%;
+    }
+    .footerUpperRow {
+        flex-direction:column
     }
     .secondaryMain {
         flex-direction: column;

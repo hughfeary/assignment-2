@@ -14,7 +14,6 @@ const App = () => {
         <NavigationBar />
         <Main />
         <Footer />
-        
       </ErrorBoundary>
       
     </div>

@@ -1,8 +1,6 @@
 import React from "react";
 
 
-
-
 export function newForm() {
     let rowsCent = document.getElementsByClassName("rowContainerCentered");
     let rows = document.getElementsByClassName("rowContainer");
@@ -21,20 +19,56 @@ export function newForm() {
     document.getElementById("freeText").value = "";
 }
 
+const requireInput = ["titleInput","firstName","lastName","email","mobile"]
+
+const validateEmpty = () => {
+    for (let id of requireInput) {
+        if (document.getElementById(id).value==="") {
+            alert(`You must fill in all personal information.`)
+            return false
+        } else {
+            return true
+        }
+    }
+};
+
+const validateMobile = () => {
+    if (document.getElementById("mobile").value.length!==10) {
+        alert(`Please enter a valid mobile number.`)
+        return false
+    } else {
+        return true
+    }
+};
+
+const validateEmail = () => {
+    if (document.getElementById('email').value.search("@")===-1) {
+        alert(`Please enter a valid email address.`)
+        return false
+    } else {
+        return true
+    }
+};
+
+function formValidation() {
+    return ( validateEmpty()===true && validateMobile() === true && validateEmail()===true)
+    
+};
+
 export function buttonSubmit() {
-    let rowsCent = document.getElementsByClassName("rowContainerCentered");
-    let rows = document.getElementsByClassName("rowContainer");
-   
-    for (let i=0;i<rowsCent.length;i+=1) {
-        rowsCent[i].style.display="none";
+    if (formValidation()) {
+        let rowsCent = document.getElementsByClassName("rowContainerCentered");
+        let rows = document.getElementsByClassName("rowContainer");
+    
+        for (let i=0;i<rowsCent.length;i+=1) {
+            rowsCent[i].style.display="none";
+        }
+        for (let i=0; i<rows.length;i+=1) {
+            rows[i].style.display="none";
+        }
+        document.getElementById("formConfirmation").style.display ="flex";
     }
-    for (let i=0; i<rows.length;i+=1) {
-        rows[i].style.display="none";
-    }
-    document.getElementById("formConfirmation").style.display ="flex";
 }
-
-
 
 const MembershipForm = (props) => {
     function focus(id) {
